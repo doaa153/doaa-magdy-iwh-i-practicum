@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body, * {
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  background: #f7f7f7;
+}
+h1 {
+  color: #2b5d3a;
+}
+a {
+  text-decoration: none;
+  color: #0a66c2;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.form-row { margin: 8px 0; }
+label { display: inline-block; width: 120px; }
+input { padding: 6px; width: 240px; }
+button { padding: 8px 12px; background: #2b5d3a; color: white; border: none; cursor: pointer; }
+table.records { width: 90%; border-collapse: collapse; margin-top: 12px; }
+table.records th, table.records td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+table.records th { background: #eaf6ec; }
+.error { color: red; margin: 8px 0; }
+
+/* body, * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -55,4 +79,4 @@ input[type="submit"] {
     border: none;
     padding: .375rem 1rem;
     margin-top: 10px;
-}
+} */

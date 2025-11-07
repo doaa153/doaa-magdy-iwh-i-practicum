@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title= title
+        link(rel='stylesheet', href='/css/style.css')
+    body
+        h1 Add a New Video Game
+        a(href='/') ← Return to the homepage
+        form(action='/update-cobj' method='POST')
+            div.form-row
+                label(for='video_game_name') Game Name:
+                input(type='text' id='video_game_name' name='video_game_name' required)
+            div.form-row
+                label(for='game_publisher') Publisher:
+                input(type='text' id='game_publisher' name='game_publisher')
+            div.form-row
+                label(for='game_price') Price:
+                input(type='number' step='0.01' id='game_price' name='game_price')
+            div.form-row
+                button(type='submit') Create Record

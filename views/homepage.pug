@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    a(href='/update-cobj') Add to this table
+    if error
+      p.error Error: #{error}
+    table.records
+      thead
+        tr
+          each prop in properties
+            th= prop.replace(/_/g, ' ').replace(/\b\w/g, s => s.toUpperCase())
+      tbody
+        if items.length === 0
+          tr
+            td(colspan=properties.length) No records found.
+        else
+          each item in items
+            tr
+              each prop in properties
+                - var val = (item.properties && item.properties[prop]) ? item.properties[prop] : ''
+                td= val
