@@ -73,9 +73,9 @@ app.post('/update-cobj', async (req, res) => {
   // Collect values from the form. Names must match the inputs in updates.pug
     const payload = {
     properties: {
-        video_game_name: req.body.video_game_name || '',
-        game_publisher: req.body.game_publisher || '',
-        game_price: req.body.game_price || ''
+        game_name: req.body.game_name || '',
+        publisher: req.body.publisher || '',
+        price: req.body.price || ''
         }
     };
 
